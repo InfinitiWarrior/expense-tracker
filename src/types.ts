@@ -1,6 +1,12 @@
-export interface Transaction {
-    id: number;
-    description: string;
-    amount: number;
-    type: 'income' | 'expense';
-}
+export interface HeaderProps {
+    balance: number;
+  }
+  
+  export interface TransactionFormProps {
+    addTransaction: (transaction: any) => void;
+  }
+  
+  export interface TransactionListProps {
+    transactions: any[];
+  }
+  

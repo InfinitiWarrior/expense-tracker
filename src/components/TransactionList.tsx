@@ -1,20 +1,14 @@
 import React from 'react';
-import { Transaction } from '../types';
-
-interface TransactionListProps {
-    transactions: Transaction[];
-}
+import { TransactionListProps } from '../types';
 
 const TransactionList: React.FC<TransactionListProps> = ({ transactions }) => {
-    return (
-        <ul>
-            {transactions.map((transaction) => (
-                <li key={transaction.id}>
-                    {transaction.description}: {transaction.amount} ({transaction.type})
-                </li>
-            ))}
-        </ul>
-    );
+  return (
+    <ul>
+      {transactions.map((transaction, index) => (
+        <li key={index}>{transaction}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default TransactionList;
