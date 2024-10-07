@@ -19,7 +19,6 @@ const pool = new Pool({
     port: 5432, // Default PostgreSQL port
 });
 
-
 // Test the connection
 pool.connect((err) => {
     if (err) throw err;
@@ -85,4 +84,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
